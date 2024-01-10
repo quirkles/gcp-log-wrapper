@@ -43,7 +43,7 @@ export async function main() {
 
   const error = new Error("this is an error");
 
-  for (const level of Object.keys(logLevel).slice(3, 4)) {
+  for (const level of Object.keys(logLevel)) {
     // single args
     logger[level as LogLevel](`this is a log with level: ${level}`);
     logger[level as LogLevel](generateMockPayload());
