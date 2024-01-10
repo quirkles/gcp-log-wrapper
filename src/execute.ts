@@ -67,6 +67,11 @@ export async function main() {
       `this is a log with level: ${level}`,
       generateMockLabels(),
     );
+    logger[level as LogLevel](
+      generateMockPayload(),
+      `this is a log with level: ${level}`,
+      generateMockLabels(),
+    );
   }
 }
 
