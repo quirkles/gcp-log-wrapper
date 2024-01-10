@@ -260,6 +260,8 @@ export const ResourceType = {
 } as const;
 
 export type ResourceType = keyof typeof ResourceType;
+// If you add another resource type then to need to pull in the resource labels and add them here, link is below
+// https://cloud.google.com/monitoring/api/resources
 
 export type ResourceLabel<Resource extends ResourceType> = Partial<
   Resource extends typeof ResourceType.cloud_function
